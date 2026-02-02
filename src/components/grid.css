@@ -1,0 +1,60 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.grid-cell {
+  aspect-ratio: 1;
+  background-color: #f8fafc; /* Very light gray */
+  border: 2px dashed #cbd5e1; /* Dashed border like screenshot */
+  border-radius: 12px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-cell:hover {
+  border-color: var(--primary);
+  background-color: #eff6ff;
+}
+
+/* Selected State */
+.grid-cell.active {
+  border: 2px solid var(--primary);
+  background-color: #eff6ff;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+}
+
+/* The Blue Checkmark Badge */
+.check-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--primary);
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Coordinate Label (A1, B2...) */
+.cell-label {
+  position: absolute;
+  bottom: 4px;
+  font-size: 10px;
+  color: #94a3b8;
+  font-weight: 600;
+}
