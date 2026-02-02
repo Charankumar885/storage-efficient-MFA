@@ -25,7 +25,7 @@ const Register = () => {
     }));
 
     try {
-      const response = await axios.post("http://localhost:5000/register", {
+      const response = await axios.post("https://storage-efficient-mfa.onrender.com/register", {
         email: formData.email,
         password: formData.password,
         secretPattern: secretPattern // Sending JSON, not Image Blobs!
